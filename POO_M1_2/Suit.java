@@ -9,8 +9,6 @@ public enum Suit {
     CLUBS("Paus"),
     DIAMONDS("Ouros");
     
-    
-    
     private Suit(String description){
         
     }

@@ -8,7 +8,7 @@ package br.univali.kob.poo1.aula03;
 
 /**
  *
- * @author Aream
+ * @author Aream e Gustavo
  */
 public class M1_02_Aream_GustavoCassol_GuessGame {
 
@@ -16,8 +16,7 @@ public class M1_02_Aream_GustavoCassol_GuessGame {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
-        Deck deck = new Deck();
-        System.out.println(deck.getCard(13));
+        DeckTest test = new DeckTest();
+        test.rodar();
     }   
 }

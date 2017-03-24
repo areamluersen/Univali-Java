@@ -2,7 +2,7 @@ package br.univali.kob.poo1.aula03;
 
 /**
  *
- * @author Aream
+ * @author Aream e Gustavo
  */
 public class Carta {
 
@@ -13,7 +13,6 @@ public class Carta {
         setValue(nr);
         setSuit(naipe);
     }
-
     
     /**
      * Naipe das cartas
@@ -21,18 +20,18 @@ public class Carta {
     private Suit suit;
 
     /**
-     * Valor das cartas
+     * Número das cartas
      */
     private Value value;
     /**
-     * @return Retorna Naipe da carta
+     * @return Naipe da carta
      */
     public Suit getSuit() {
         return suit;
     }
 
     /**
-     * @param naipe
+     * @param naipe Naipe da carta
      */
     public void setSuit(int naipe) {
         switch (naipe){
@@ -40,15 +39,18 @@ public class Carta {
         case 1: this.suit = suit.HEARTS; break;
         case 2: this.suit = suit.CLUBS; break;
         case 3: this.suit = suit.DIAMONDS; break; 
-    }
+        }
     }
  
+    /**
+     * @return Número da carta 
+     */
     public Value getValue(){
         return value;
     }
 
     /**
-     * @param nr Valor Utilizado para identificar nº carta a ser setada.
+     * @param nr Valor utilizado para identificar o número da carta a ser "setada"
      */
     public void setValue(int nr) {
         switch (nr){
@@ -65,7 +67,6 @@ public class Carta {
             case 10: this.value = value.JACK; break;
             case 11: this.value = value.QUEEN; break;
             case 12: this.value = value.KING; break;
-            
         }
     }
 
