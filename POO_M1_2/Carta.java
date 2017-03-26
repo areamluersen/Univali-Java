@@ -1,37 +1,57 @@
 package br.univali.kob.poo1.aula03;
 
 /**
- *
- * @author Aream e Gustavo
+ * Classe que contém os atributos que descrevem uma carta de baralho.
+ * 
+ * @author Aream e Gustavo.
  */
 public class Carta {
 
     /**
-     * Default constructor
+     * Default constructor.
+     * 
+     * @param naipe Naipe da carta.
+     * @param num Número da carta.
      */
-    public Carta(int naipe, int numero) {
-        setValue(numero);
-        setSuit(naipe);
+    public Carta (int naipe, int num) {
+        setValue (num);
+        setSuit (naipe);
     }
     
     /**
-     * Naipe das cartas
+     * Naipe da carta.
      */
     private Suit suit;
 
     /**
-     * Número das cartas
+     * Número da carta.
      */
     private Value value;
 
-    public String getDescriptionSuit(){
-        return suit.getDescription();
+    /**
+     * Getter.
+     * 
+     * @return Naipe da carta em forma de String.
+     */
+    public String getDescriptionSuit (){
+        return suit.getDescription ();
     }
     
     /**
-     * @param naipe Naipe da carta
+     * Getter.
+     * 
+     * @return Naipe da carta em forma de int.
      */
-    public void setSuit(int naipe) {
+    public int getNumSuit (){
+        return suit.getNum ();
+    }
+    
+    /**
+     * Setter.
+     * 
+     * @param naipe Naipe da carta.
+     */
+    public void setSuit (int naipe) {
         switch (naipe){
         case 0: this.suit = suit.SPADES; break;
         case 1: this.suit = suit.HEARTS; break;
@@ -40,18 +60,30 @@ public class Carta {
         }
     }
  
-    public String getDescriptionValue(){
-        return value.getDescription();
+    /**
+     * Getter.
+     * 
+     * @return Número da carta em forma de String.
+     */
+    public String getDescriptionValue (){
+        return value.getDescription ();
     }
     
-    public int getNum(){
-        return value.getNum();
+    /**
+     * Getter.
+     * 
+     * @return Número da carta em forma de int.
+     */
+    public int getNumValue (){
+        return value.getNum ();
     }
 
     /**
-     * @param num Valor utilizado para identificar o número da carta a ser "setada"
+     * Setter.
+     * 
+     * @param num Número da carta.
      */
-    public void setValue(int num) {
+    public void setValue (int num) {
         switch (num){
             case 0: this.value = value.A; break;
             case 1: this.value = value.DOIS; break;

@@ -1,7 +1,9 @@
 package br.univali.kob.poo1.aula03;
 
 /**
+ * Número da carta.
  * 
+ * @author Aream e Gustavo.
  */
 public enum Value {
     A("A",1),
@@ -18,21 +20,42 @@ public enum Value {
     QUEEN("Rainha",11),
     KING("Rei",13);
 
+    /**
+     * Número da carta em forma de String.
+     */
     private String description;
 
-    private int numCarta;
-    
+    /**
+     * Número da carta em forma de int.
+     */
+    private int num;
 
+    /**
+     * Getter.
+     * 
+     * @return Número da carta em forma de String.
+     */
     public String getDescription (){
         return description;
     }
     
+    /**
+     * Getter.
+     * 
+     * @return Número da carta em forma de int.
+     */
     public int getNum (){
-        return numCarta;
+        return num;
     }
     
-    private Value (String description, int valorCarta){
-        this.numCarta = valorCarta;
+    /**
+     * Contrutor.
+     * 
+     * @param description Número da carta em forma de String.
+     * @param num Número da carta em forma de int.
+     */
+    private Value (String description, int num){
+        this.num = num;
         this.description = description;
     }
     
