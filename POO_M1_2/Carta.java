@@ -9,8 +9,8 @@ public class Carta {
     /**
      * Default constructor
      */
-    public Carta(int naipe, int nr) {
-        setValue(nr);
+    public Carta(int naipe, int numero) {
+        setValue(numero);
         setSuit(naipe);
     }
     
@@ -23,13 +23,11 @@ public class Carta {
      * Número das cartas
      */
     private Value value;
-    /**
-     * @return Naipe da carta
-     */
-    public Suit getSuit() {
-        return suit;
-    }
 
+    public String getDescriptionSuit(){
+        return suit.getDescription();
+    }
+    
     /**
      * @param naipe Naipe da carta
      */
@@ -42,18 +40,19 @@ public class Carta {
         }
     }
  
-    /**
-     * @return Número da carta 
-     */
-    public Value getValue(){
-        return value;
+    public String getDescriptionValue(){
+        return value.getDescription();
+    }
+    
+    public int getNum(){
+        return value.getNum();
     }
 
     /**
-     * @param nr Valor utilizado para identificar o número da carta a ser "setada"
+     * @param num Valor utilizado para identificar o número da carta a ser "setada"
      */
-    public void setValue(int nr) {
-        switch (nr){
+    public void setValue(int num) {
+        switch (num){
             case 0: this.value = value.A; break;
             case 1: this.value = value.DOIS; break;
             case 2: this.value = value.TRES; break;

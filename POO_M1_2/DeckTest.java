@@ -10,19 +10,23 @@ public class DeckTest {
      */
     public DeckTest() {
     }
-
+    
+    public void printAll(Deck deck){
+        for(int i=0; i<52; i++){
+            System.out.println("Carta " + i + ": " +
+                deck.getCard(i).getDescriptionValue() + " de " +
+                deck.getCard(i).getDescriptionSuit());
+        }
+    }
+    
     /**
      * 
      */
     public void rodar() {
         Deck deck = new Deck();
-        
-        //printar todas as cartas
-        
-        for(int i=0; i<52; i++){
-        deck.getCard(i);
-        System.out.println();
-        }
+        //printAll(deck);
+        deck.shuffle();
+        printAll(deck);
     }
         
 }

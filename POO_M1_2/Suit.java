@@ -9,7 +9,14 @@ public enum Suit {
     CLUBS("Paus"),
     DIAMONDS("Ouros");
     
-    private Suit(String description){
-        
+    private String description;
+    
+    public String getDescription (){
+        return description;
     }
+    
+    private Suit (String description){
+        this.description = description;
+    }
+    
 }

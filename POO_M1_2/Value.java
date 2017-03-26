@@ -14,21 +14,26 @@ public enum Value {
     OITO("Oito",8),
     NOVE("Nove",9),
     DEZ("Dez",10),
-    JACK("Jack",11),
-    QUEEN("Queen",11),
-    KING("King",13);
+    JACK("Valete",11),
+    QUEEN("Rainha",11),
+    KING("Rei",13);
 
-    private int valorCarta;
     private String description;
+
+    private int numCarta;
     
-    private Value (String description, int valorCarta){
-        this.valorCarta = valorCarta;
-        this.description = description;
-    }
-    public int getValue (){
-        return valorCarta;
-    }
+
     public String getDescription (){
         return description;
     }
+    
+    public int getNum (){
+        return numCarta;
+    }
+    
+    private Value (String description, int valorCarta){
+        this.numCarta = valorCarta;
+        this.description = description;
+    }
+    
 }
