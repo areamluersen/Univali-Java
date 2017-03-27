@@ -14,16 +14,12 @@ public class Game {
     }
     
     /**
-     * Objeto que contém 52 objetos carta.
-     */
-    private Deck deck = new Deck();
-    
-    /**
      * Método que roda o jogo.
      * 
      * @return pontuação do jogador no final do jogo.
      */
     public int jogar (){
+        Deck deck = new Deck();
         UserInterface.iniciar();
         int num_player;
         int naipe_player;
