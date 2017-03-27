@@ -17,7 +17,7 @@ public enum Value {
     NOVE("Nove",9),
     DEZ("Dez",10),
     JACK("Valete",11),
-    QUEEN("Rainha",11),
+    QUEEN("Rainha",12),
     KING("Rei",13);
 
     /**

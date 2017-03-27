@@ -34,13 +34,11 @@ public class Deck{
     public void shuffle (){
         Carta[] embaralhado = new Carta[52];
         List<Integer> posicoes_aleatorias = new ArrayList<Integer> ();
-        for (int i = 0; i < 52; i++) {
+        for (int i = 0; i < 52; i++)
             posicoes_aleatorias.add (i);
-        }
         Collections.shuffle (posicoes_aleatorias);
-        for(int i=0; i<52; i++){
+        for(int i=0; i<52; i++)
             embaralhado[i] = deck[posicoes_aleatorias.get (i)];
-        }
         deck = embaralhado;
     }
 
